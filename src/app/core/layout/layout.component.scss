@@ -1,0 +1,68 @@
+@import './../../../theme';
+
+:host {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+}
+
+.layout-menu {
+    flex: 0 0 0;
+}
+
+.layout-content {
+    display: flex;
+    flex: 1 0 0;
+    background-color: $background-color;
+}
+
+.menu {
+    display: flex;
+    background-color: $secondary-background-color;
+}
+
+.menu-item {
+    flex: 1 0 auto;
+
+    & mat-icon {
+        top: 8px;
+        position: relative;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.selected {
+    color: $primary-color;
+    fill: $primary-color;
+    font-weight: bold;
+}
+
+// LARGE SCREEN
+@media screen and (min-width : 768px) {
+    :host {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 8rem;
+        height: 100%;
+    }
+
+    .menu-item {
+        flex: 0 0 auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .progress-bar {
+      position: relative;
+    }
+
+}
+
+.mat-progress-bar {
+  position: absolute;
+}
