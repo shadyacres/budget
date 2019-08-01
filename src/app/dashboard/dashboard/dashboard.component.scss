@@ -5,9 +5,9 @@ $large-spacing: 20px;
   main {
     padding: $large-spacing !important;
   }
-  .budgets-card {
-    margin-right: $large-spacing !important;
-  }
+  // .budgets-card {
+  //   margin-right: $large-spacing !important;
+  // }
   .grid {
     margin-top: $large-spacing !important;
   }
@@ -26,9 +26,9 @@ main {
   overflow: auto;
 }
 
-.budgets-card {
-  margin-right: $small-spacing;
-}
+// .budgets-card {
+//   margin-right: $small-spacing;
+// }
 
 .grid {
   margin-top: $small-spacing;

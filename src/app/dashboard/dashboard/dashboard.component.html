@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <span>Budget</span>
 </mat-toolbar>
-<main>
+<main *ngIf="!isLoading; else spinner">
   <app-summary [budgetSummary]="budgetSummary" [cashflowSummary]="cashflowSummary"></app-summary>
   <div class="grid">
     <mat-card class="budgets-card">
@@ -14,3 +14,4 @@
     </mat-card>
   </div>
 </main>
+<ng-template #spinner><mat-progress-spinner mode="indeterminate" color="accent"></mat-progress-spinner></ng-template>

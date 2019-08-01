@@ -4,6 +4,5 @@
   <div class="progress-bar-container">
     <div class="money-spent">{{budget.current | currency: 'USD'}} remaining out of {{budget.max | currency: 'USD'}}</div>
     <div class="progress-bar" [style.width]="budget.leftPercentage"></div>
-    <!-- <div class="today" [style.left]="today"></div> -->
   </div>
 </div>

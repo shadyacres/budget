@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { BudgetSummary } from '../../models/budgetSummary';
 import { Budget } from '../../models/budget';
 
 @Component({

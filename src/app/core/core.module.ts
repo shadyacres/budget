@@ -4,6 +4,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { MockApi } from '../shared/api/mock-api';
 
 
 
@@ -14,7 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(MockApi, { delay: 500, passThruUnknownUrl: true })
   ],
   exports: [LayoutComponent]
 })
