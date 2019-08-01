@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Budget</span>
+</mat-toolbar>
+<main>
+  <app-summary [budgetSummary]="budgetSummary" [cashflowSummary]="cashflowSummary"></app-summary>
+  <div class="grid">
+    <mat-card class="budgets-card">
+      <mat-card-header>
+        <mat-card-title>
+          Budgets by Category
+        </mat-card-title>
+      </mat-card-header>
+      <app-budget-progress *ngFor="let budget of budgets" [budget]="budget"></app-budget-progress>
+    </mat-card>
+  </div>
+</main>

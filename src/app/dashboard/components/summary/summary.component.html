@@ -1,0 +1,38 @@
+<mat-card class="summary">
+  <div class="summary-table">
+    <table>
+      <tbody>
+        <tr>
+          <td>Total balance</td>
+          <td class="total-balance">{{budgetSummary.totalBalance | currency:'USD'}}</td>
+        </tr>
+        <tr>
+          <td>Budget</td>
+          <td class="budget-left">{{budgetSummary.periodBudgetLeft | currency:'USD'}}</td>
+        </tr>
+        <tr>
+          <td>Per day</td>
+          <td class="per-day-left">{{budgetSummary.perDayBudgetLeft | currency:'USD'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="summary-table">
+    <table>
+      <tbody>
+        <tr>
+          <td>Cashflow</td>
+          <td class="cashflow">{{cashflowSummary.cashflow | currency:'USD'}}</td>
+        </tr>
+        <tr>
+          <td>Income</td>
+          <td class="income">{{cashflowSummary.income | currency:'USD'}}</td>
+        </tr>
+        <tr>
+          <td>Expense</td>
+          <td class="expense">{{cashflowSummary.expense | currency:'USD'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</mat-card>
