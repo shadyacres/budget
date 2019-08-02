@@ -1,26 +1,33 @@
 <div class="layout-menu">
   <div class="menu">
-    <button mat-button>
+    <button mat-button [routerLink]="['./']">
       <mat-icon svgIcon="home"></mat-icon>
         <div>
           Dashboard
         </div>
     </button>
-    <button mat-button>
+    <button mat-button [routerLink]="['./records']">
         <mat-icon svgIcon="list"></mat-icon>
           <div>
             Records
           </div>
       </button>
-      <button mat-button>
+      <button mat-button [routerLink]="['./settings']">
           <mat-icon svgIcon="settings"></mat-icon>
             <div>
               Settings
             </div>
         </button>
+        <!-- <button mat-button (click)="click()">
+          <mat-icon svgIcon="settings"></mat-icon>
+            <div>
+              {{settingsText}}
+            </div>
+        </button> -->
   </div>
 </div>
 
-<div class="layout-content">
+<div *ngIf="!isLoading; else spinner" class="layout-content">
   <ng-content></ng-content>
 </div>
+<ng-template #spinner><mat-progress-spinner style="margin: 30px auto; width: 100px; height: 100px;" mode="indeterminate" color="accent"></mat-progress-spinner></ng-template>

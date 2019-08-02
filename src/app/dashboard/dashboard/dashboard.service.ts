@@ -2,7 +2,7 @@ import { CashflowSummary } from './../models/cashflowSummary';
 import { BudgetSummary } from './../models/budgetSummary';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { Budget } from '../models/budget';
 import { HttpClient } from '@angular/common/http';
 
@@ -22,11 +22,8 @@ export class DashboardService {
 
   getBudgets(): Observable<Budget[]> {
     return this.httpClient.get<Budget[]>('api/budgets').pipe(
-      tap(f => console.log(f)),
-      map(f => {
-        const y: Budget[] = [];
-        f.forEach((x) => y.push(Budget.build(x)));
-        return y;
-      }));
+      map((budgets: Budget[]) =>
+        budgets.map(budget => Budget.build(budget)))
+      );
   }
 }

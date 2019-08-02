@@ -4,6 +4,7 @@ import { Budget } from './../models/budget';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DashboardService } from './dashboard.service';
 import { forkJoin, Subscription, zip, Observable, fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,6 +22,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   constructor(public dashboardService: DashboardService) { }
 
   ngOnInit() {
+
     this.subscriptions.push(
     zip(
     this.dashboardService.getBudgetSummary(1),

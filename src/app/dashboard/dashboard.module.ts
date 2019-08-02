@@ -1,3 +1,4 @@
+import { DashboardRoutingModule } from './dashboard-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,9 +11,10 @@ import { DashboardService } from './dashboard/dashboard.service';
   declarations: [DashboardComponent, SummaryComponent, BudgetProgressComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    DashboardRoutingModule
   ],
-  exports: [DashboardComponent],
+  exports: [DashboardRoutingModule],
   providers: [DashboardService]
 })
 export class DashboardModule { }

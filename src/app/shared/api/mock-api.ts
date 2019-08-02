@@ -1,9 +1,9 @@
-import { Budget } from '../../dashboard/models/budget';
+import { records } from '../mocks/mock-records';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { mockBudgets, mockCashFlowSummary, mockBudgetSummary } from '../mocks/mock-entities';
 
 export class MockApi implements InMemoryDbService {
   createDb() {
-    return {budgets: mockBudgets, cashflowsummaries: mockCashFlowSummary, budgetsummaries: mockBudgetSummary};
+    return {budgets: mockBudgets, records, cashflowsummaries: mockCashFlowSummary, budgetsummaries: mockBudgetSummary};
   }
 }

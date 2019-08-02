@@ -4,21 +4,38 @@ import { CommonModule } from '@angular/common';
 import {
   MatToolbarModule,
   MatCardModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTableModule,
+  MatIconModule,
+  MatFormFieldModule,
+  MatButtonModule,
+  MatInputModule
 } from '@angular/material';
+import { PeriodSelectorComponent } from './components/period-selector/period-selector.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [PeriodSelectorComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   exports: [
     MatToolbarModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatTableModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    PeriodSelectorComponent
   ]
 })
 export class SharedModule {}
